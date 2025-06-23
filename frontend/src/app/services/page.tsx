@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { CalendarIcon, UsersIcon, BookOpenIcon, SunIcon, MoonIcon } from "lucide-react";
+import { UsersIcon, BookOpenIcon, SunIcon, MoonIcon } from "lucide-react";
 
 const services = [
   {
