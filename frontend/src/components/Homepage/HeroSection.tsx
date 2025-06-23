@@ -1,9 +1,8 @@
 'use client'
 
 import React from 'react'
-import { Button } from '@/components/ui/Button'
+import Link from 'next/link'
 import { WoodCross } from '@/components/ui/WoodCross'
-import { useTheme } from '@/contexts/ThemeContext'
 import { ChevronRightIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline'
 
 interface ServiceTime {
@@ -19,28 +18,6 @@ const serviceTimes: ServiceTime[] = [
 ]
 
 export const HeroSection: React.FC = () => {
-  const { variant, theme } = useTheme()
-  
-  const getHeroStyles = () => {
-    if (variant === 'brutalist') {
-      return {
-        container: `relative bg-background text-foreground border-8 border-primary ${theme === 'dark' ? 'shadow-[20px_20px_0px_hsl(var(--accent))]' : 'shadow-[20px_20px_0px_hsl(var(--secondary))'}`,
-        overlay: 'absolute inset-0 bg-accent/10',
-        title: 'text-4xl font-black tracking-tighter sm:text-5xl lg:text-7xl uppercase transform -skew-x-2',
-        subtitle: 'text-2xl font-black tracking-tight uppercase text-accent transform skew-x-1'
-      }
-    }
-    
-    return {
-      container: 'relative bg-gradient-to-br from-church-primary/90 via-church-primary/70 to-accent/80 text-white',
-      overlay: 'absolute inset-0 bg-black/20',
-      title: 'text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl',
-      subtitle: 'block text-church-secondary'
-    }
-  }
-
-  const styles = getHeroStyles()
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-600 via-pink-500 to-orange-500 animate-gradient">
       {/* Animated background elements */}
@@ -93,20 +70,20 @@ export const HeroSection: React.FC = () => {
           </div>
 
           <div className="mt-12 flex flex-col gap-6 sm:flex-row sm:justify-center">
-            <button 
-              className="btn-modern group"
-              onClick={() => window.location.href = '/plan-visit'}
+            <Link 
+              href="/plan-visit"
+              className="btn-modern group inline-flex items-center justify-center"
             >
               Plan Your Visit
               <ChevronRightIcon className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </button>
+            </Link>
             
-            <button 
-              className="bg-white/20 backdrop-blur-lg border border-white/30 text-white hover:bg-white/30 font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-              onClick={() => window.location.href = '/sermons'}
+            <Link 
+              href="/sermons"
+              className="bg-white/20 backdrop-blur-lg border border-white/30 text-white hover:bg-white/30 font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
             >
               Watch Latest Sermon
-            </button>
+            </Link>
           </div>
 
           <div className="mt-10 flex items-center justify-center space-x-2 text-white/80">

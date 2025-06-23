@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardContent } from '@/components/ui/Card'
+import Link from 'next/link'
 import { HeartIcon, UsersIcon, HandRaisedIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 
 const values = [
@@ -68,13 +68,13 @@ export const WelcomeSection: React.FC = () => {
                 to help you feel at home from the moment you arrive. Our friendly welcome team is here 
                 to answer questions and help you get connected.
               </p>
-              <button 
-                className="btn-modern group"
-                onClick={() => window.location.href = '/plan-visit'}
+              <Link 
+                href="/plan-visit"
+                className="btn-modern group inline-flex items-center justify-center"
               >
                 Plan Your First Visit
                 <ChevronRightIcon className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </button>
+              </Link>
             </div>
             <div className="lg:pl-8">
               <h3 className="text-2xl font-bold text-gray-900">What to Expect</h3>
