@@ -56,7 +56,7 @@ export const HeroSection: React.FC = () => {
 
           <div className="mt-12 grid gap-6 sm:grid-cols-3 max-w-4xl mx-auto">
             {serviceTimes.map((service, index) => (
-              <div key={index} className="modern-card p-6 text-center group hover:scale-105 transition-all duration-300">
+              <div key={index} className="glass-enhanced p-6 text-center group hover-glow fade-in" style={{animationDelay: `${index * 0.2}s`}}>
                 <div className="flex items-center justify-center space-x-2 mb-3">
                   <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
                     <ClockIcon className="h-5 w-5 text-white" />
@@ -72,7 +72,7 @@ export const HeroSection: React.FC = () => {
           <div className="mt-12 flex flex-col gap-6 sm:flex-row sm:justify-center">
             <Link 
               href="/plan-visit"
-              className="btn-modern group inline-flex items-center justify-center"
+              className="btn-divine group inline-flex items-center justify-center"
             >
               Plan Your Visit
               <ChevronRightIcon className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -80,14 +80,14 @@ export const HeroSection: React.FC = () => {
             
             <Link 
               href="/sermons"
-              className="bg-white/20 backdrop-blur-lg border border-white/30 text-white hover:bg-white/30 font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
+              className="glass-enhanced text-white hover:bg-white/30 font-semibold py-3 px-8 rounded-full hover-lift inline-flex items-center justify-center"
             >
               Watch Latest Sermon
             </Link>
           </div>
 
           <div className="mt-10 flex items-center justify-center space-x-2 text-white/80">
-            <div className="w-8 h-8 bg-white/20 backdrop-blur-lg rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 glass-enhanced rounded-full flex items-center justify-center">
               <MapPinIcon className="h-4 w-4" />
             </div>
             <span className="font-medium">The Kings Centre Simpson, Milton Keynes MK6 3AL</span>

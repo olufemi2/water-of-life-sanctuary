@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { ProgressiveLoader } from '@/components/ui/ProgressiveLoader'
 import { HeartIcon, UsersIcon, HandRaisedIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 
 const values = [
@@ -41,17 +42,20 @@ export const WelcomeSection: React.FC = () => {
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {values.map((value, index) => (
-            <div key={index} className="modern-card text-center group p-8 hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-purple-50">
+            <ProgressiveLoader key={index} delay={index * 200}>
+              <div className="glass-enhanced text-center group p-8 hover-glow bg-gradient-to-br from-white to-purple-50">
               <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg group-hover:shadow-xl transition-all duration-300 float">
                 <value.icon className="h-10 w-10 text-white" />
               </div>
               <h3 className="mt-6 text-2xl font-black text-gray-900">{value.title}</h3>
               <p className="mt-4 text-gray-700 leading-relaxed">{value.description}</p>
-            </div>
+              </div>
+            </ProgressiveLoader>
           ))}
         </div>
 
-        <div className="mt-16 modern-card p-10 bg-gradient-to-br from-purple-50 to-orange-50">
+        <ProgressiveLoader delay={800}>
+          <div className="mt-16 glass-enhanced p-10 bg-gradient-to-br from-purple-50 to-orange-50 hover-lift">
           <div className="grid gap-8 lg:grid-cols-2 items-center">
             <div className="space-y-6">
               <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-sm font-semibold">
@@ -70,7 +74,7 @@ export const WelcomeSection: React.FC = () => {
               </p>
               <Link 
                 href="/plan-visit"
-                className="btn-modern group inline-flex items-center justify-center"
+                className="btn-divine group inline-flex items-center justify-center"
               >
                 Plan Your First Visit
                 <ChevronRightIcon className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -98,7 +102,8 @@ export const WelcomeSection: React.FC = () => {
               </ul>
             </div>
           </div>
-        </div>
+          </div>
+        </ProgressiveLoader>
       </div>
     </section>
   )

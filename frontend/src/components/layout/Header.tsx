@@ -29,7 +29,7 @@ export const Header: React.FC = () => {
             <Link href="/" className="flex items-center space-x-6 group">
               {/* Combined Logo Container */}
               <div className="relative">
-                <div className="flex items-center bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl px-4 py-3 shadow-lg group-hover:shadow-2xl transition-all duration-500 float logo-glow overflow-hidden">
+                <div className="flex items-center glass-enhanced rounded-2xl px-4 py-3 shadow-lg hover-glow float logo-glow overflow-hidden">
                   {/* RCCG Logo */}
                   <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center mr-0 overflow-hidden">
                     <Image 
@@ -86,7 +86,7 @@ export const Header: React.FC = () => {
                 href="https://x.com/wateroflifesanctuary" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-7 h-7 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300 group"
+                className="w-7 h-7 glass-enhanced rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover-lift group"
                 aria-label="Follow us on X"
               >
                 <svg className="w-3 h-3 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
@@ -98,7 +98,7 @@ export const Header: React.FC = () => {
                 href="https://facebook.com/wateroflifesanctuary" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-7 h-7 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600/20 transition-all duration-300 group"
+                className="w-7 h-7 glass-enhanced rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600/20 hover-lift group"
                 aria-label="Follow us on Facebook"
               >
                 <svg className="w-3 h-3 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
@@ -110,7 +110,7 @@ export const Header: React.FC = () => {
                 href="https://youtube.com/@wateroflifesanctuary" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-7 h-7 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-red-600/20 transition-all duration-300 group"
+                className="w-7 h-7 glass-enhanced rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-red-600/20 hover-lift group"
                 aria-label="Subscribe to our YouTube"
               >
                 <svg className="w-3 h-3 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
@@ -124,7 +124,7 @@ export const Header: React.FC = () => {
               variant="secondary" 
               size="sm"
               onClick={() => setDonationModalOpen(true)}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 font-semibold px-6"
+              className="btn-divine px-6"
             >
               Give Online
             </Button>

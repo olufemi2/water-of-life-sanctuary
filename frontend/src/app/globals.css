@@ -3,7 +3,7 @@
 
 @layer base {
   :root {
-    /* Modern Vibrant Faith Theme */
+    /* Enhanced Modern Vibrant Faith Theme - Phase 1 */
     --background: 0 0% 100%;
     --foreground: 215 28% 17%;
     --card: 0 0% 100%;
@@ -25,16 +25,35 @@
     --ring: 262 83% 58%;
     --radius: 0.75rem;
     
-    /* Vibrant church colors */
+    /* Enhanced Vibrant Church Colors */
     --church-primary: 262 83% 58%;
+    --church-primary-hover: 262 83% 48%;
     --church-secondary: 24 95% 53%;
+    --church-secondary-hover: 24 95% 43%;
     --church-accent: 330 81% 60%;
+    --church-accent-hover: 330 81% 50%;
     --church-success: 142 76% 36%;
     --church-info: 198 93% 60%;
+    --church-warning: 45 93% 58%;
+    
+    /* Enhanced Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(24 95% 53%) 100%);
     --gradient-secondary: linear-gradient(135deg, hsl(330 81% 60%) 0%, hsl(198 93% 60%) 100%);
+    --gradient-divine: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(330 81% 60%) 50%, hsl(24 95% 53%) 100%);
+    --gradient-blessed: linear-gradient(135deg, hsl(198 93% 60%) 0%, hsl(142 76% 36%) 100%);
+    
+    /* Enhanced Glass Morphism */
     --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-bg-hover: rgba(255, 255, 255, 0.35);
     --glass-border: rgba(255, 255, 255, 0.18);
+    --glass-border-hover: rgba(255, 255, 255, 0.28);
+    
+    /* Animation Variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-divine: 0 20px 25px -5px rgba(147, 51, 234, 0.3), 0 10px 10px -5px rgba(147, 51, 234, 0.2);
   }
  
   .dark {
@@ -169,7 +188,7 @@
     100% { box-shadow: 0 0 30px rgba(147, 51, 234, 0.6); }
   }
   
-  /* Pulse effect for logo backgrounds */
+  /* Enhanced Pulse effect for logo backgrounds */
   .pulse-bg {
     animation: pulseBg 4s ease-in-out infinite;
   }
@@ -177,5 +196,87 @@
   @keyframes pulseBg {
     0%, 100% { opacity: 0.25; }
     50% { opacity: 0.4; }
+  }
+  
+  /* Phase 1: Enhanced Micro-interactions */
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .hover-glow {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: var(--shadow-divine);
+    transform: scale(1.02);
+  }
+  
+  /* Enhanced Button Interactions */
+  .btn-divine {
+    @apply bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform transition-all duration-300;
+  }
+  
+  .btn-divine:hover {
+    box-shadow: var(--shadow-divine);
+    transform: translateY(-2px) scale(1.05);
+  }
+  
+  /* Smooth Loading States */
+  .loading-shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  
+  /* Progressive Loading Enhancement */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .slide-up {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  @keyframes slideUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Enhanced Glass Effects */
+  .glass-enhanced {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transition: var(--transition-smooth);
+  }
+  
+  .glass-enhanced:hover {
+    background: var(--glass-bg-hover);
+    border-color: var(--glass-border-hover);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeartIcon } from '@heroicons/react/24/outline'
+import Image from 'next/image'
 
 export const PastorWelcome: React.FC = () => {
   return (
@@ -21,16 +21,16 @@ export const PastorWelcome: React.FC = () => {
           {/* Pastor's Photo */}
           <div className="text-center lg:text-left">
             <div className="relative inline-block">
-              <div className="w-80 h-80 mx-auto lg:mx-0 rounded-3xl bg-gradient-to-br from-purple-600 to-pink-500 p-1 shadow-2xl float">
+              <div className="w-80 h-80 mx-auto lg:mx-0 rounded-3xl bg-gradient-to-br from-purple-600 to-pink-500 p-1 shadow-2xl float hover-glow">
                 <div className="w-full h-full rounded-3xl bg-gray-200 flex items-center justify-center overflow-hidden">
-                  {/* Placeholder for pastor's photo */}
-                  <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                    <div className="text-center text-gray-600">
-                      <HeartIcon className="w-16 h-16 mx-auto mb-4" />
-                      <p className="text-lg font-semibold">Pastor Yomi Ogunlesi</p>
-                      <p className="text-sm">Lead Pastor</p>
-                    </div>
-                  </div>
+                  <Image 
+                    src="/pastor-yomi-ogunlesi.jpg" 
+                    alt="Pastor Yomi Ogunlesi" 
+                    width={312}
+                    height={312}
+                    className="w-full h-full object-cover rounded-3xl"
+                    priority
+                  />
                 </div>
               </div>
               <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 rounded-3xl blur opacity-20 pulse-bg"></div>
@@ -44,7 +44,7 @@ export const PastorWelcome: React.FC = () => {
 
           {/* Welcome Message */}
           <div className="space-y-6">
-            <div className="modern-card p-8 bg-white/80 backdrop-blur-lg">
+            <div className="glass-enhanced p-8 hover-lift fade-in">
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-6">
                   <span className="text-2xl font-bold text-purple-600">&quot;</span>
@@ -60,7 +60,7 @@ export const PastorWelcome: React.FC = () => {
                   <span className="text-2xl font-bold text-purple-600">&quot;</span>
                 </p>
                 
-                <div className="mt-8 p-6 bg-gradient-to-r from-purple-50 to-orange-50 rounded-2xl border-l-4 border-purple-600">
+                <div className="mt-8 p-6 glass-enhanced rounded-2xl border-l-4 border-purple-600 slide-up">
                   <p className="text-gray-600 italic text-center">
                     &quot;For I know the plans I have for you,&quot; declares the Lord, &quot;plans to prosper you and not to harm you, to give you hope and a future.&quot;
                   </p>
