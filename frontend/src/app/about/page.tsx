@@ -29,7 +29,13 @@ const leadership = [
   {
     name: 'Pst. Yomi Ogunlesi',
     role: 'Senior Pastor',
-    bio: 'Pst. Yomi Ogunlesi has been leading Water of Life Sanctuary for over 15 years. He holds a Master of Divinity from Seminary College and is passionate about expository preaching and pastoral care.',
+    bio: 'Pst. Yomi Ogunlesi has been the Senior Pastor of Water of Life Sanctuary since 2003.',
+    email: 'info@wateroflifesanctuary.org.uk'
+  },
+  {
+    name: 'Pastor Kunle Solaru',
+    role: 'Assistant Pastor',
+    bio: 'Pastor Kunle Solaru has been with the assembly since 2008 and serves faithfully as the Assistant Pastor.',
     email: 'info@wateroflifesanctuary.org.uk'
   },
   {
