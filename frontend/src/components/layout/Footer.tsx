@@ -92,7 +92,7 @@ export const Footer: React.FC = () => {
               <p className="text-gray-300">10:40 AM</p>
             </div>
             <div>
-              <h4 className="font-medium">Children's Church</h4>
+              <h4 className="font-medium">Children&apos;s Church</h4>
               <p className="text-gray-300">10:40 AM (Sundays)</p>
             </div>
             <div>

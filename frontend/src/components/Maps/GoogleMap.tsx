@@ -68,7 +68,6 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ address, className = '' })
 // Alternative static map component for faster loading
 export const StaticGoogleMap: React.FC<GoogleMapProps> = ({ address, className = '' }) => {
   const encodedAddress = encodeURIComponent(address)
-  const staticMapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${encodedAddress}&zoom=15&size=800x400&maptype=roadmap&markers=color:purple%7Clabel:C%7C${encodedAddress}&key=YOUR_API_KEY`
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`
 
   return (

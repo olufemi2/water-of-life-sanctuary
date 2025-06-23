@@ -52,7 +52,7 @@ export const WelcomeSection: React.FC = () => {
             <div>
               <h3 className="text-2xl font-bold text-gray-900">New to Our Church?</h3>
               <p className="mt-4 text-gray-600">
-                We know visiting a new church can feel overwhelming. That\'s why we\'ve created resources 
+                We know visiting a new church can feel overwhelming. That&apos;s why we&apos;ve created resources 
                 to help you feel at home from the moment you arrive. Our friendly welcome team is here 
                 to answer questions and help you get connected.
               </p>
@@ -79,7 +79,7 @@ export const WelcomeSection: React.FC = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2 text-purple-600">•</span>
-                  Children\'s programs during service
+                  Children&apos;s programs during service
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2 text-purple-600">•</span>

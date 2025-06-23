@@ -194,14 +194,14 @@ export default function EventsPage() {
                 </label>
                 <div className="flex gap-2">
                   <Button
-                    variant={!showPastEvents ? 'primary' : 'outline'}
+                    variant={!showPastEvents ? 'default' : 'outline'}
                     size="sm"
                     onClick={() => setShowPastEvents(false)}
                   >
                     Upcoming
                   </Button>
                   <Button
-                    variant={showPastEvents ? 'primary' : 'outline'}
+                    variant={showPastEvents ? 'default' : 'outline'}
                     size="sm"
                     onClick={() => setShowPastEvents(true)}
                   >

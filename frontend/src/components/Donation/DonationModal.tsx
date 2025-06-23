@@ -5,7 +5,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Input } from '@/components/ui/input'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Label } from '@/components/ui/label'
-import { XMarkIcon } from '@heroicons/react/24/outline'
 import { Button } from '@/components/ui/Button'
 
 interface DonationModalProps {
@@ -145,7 +144,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose })
         </form>
 
         <p className="mt-4 text-xs text-muted-foreground text-center">
-          Your donation is secure and encrypted. You'll receive an email receipt.
+          Your donation is secure and encrypted. You&apos;ll receive an email receipt.
         </p>
       </DialogContent>
     </Dialog>

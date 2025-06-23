@@ -30,7 +30,7 @@ export const WelcomeVideo: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-blue-800/20 flex items-center justify-center">
                   <div className="text-white text-center">
                     <h3 className="text-2xl font-bold mb-2">Welcome Message</h3>
-                    <p className="text-lg">Click to play Pastor Johnson's welcome</p>
+                    <p className="text-lg">Click to play Pastor Johnson&apos;s welcome</p>
                   </div>
                 </div>
               </div>

@@ -63,7 +63,7 @@ export default function AboutPage() {
               About Water of Life Sanctuary
             </h1>
             <p className="mt-6 mx-auto max-w-3xl text-xl text-gray-600">
-              A fellowship of believers, made in God's image and called as disciples of Christ to share the Good News 
+              A fellowship of believers, made in God&apos;s image and called as disciples of Christ to share the Good News 
               with everyone through learning, listening, praying and working together actively to reach out to our communities. 
               We are a place to believe, belong, and become!
             </p>
