@@ -106,7 +106,12 @@ export default function PrayerRequestPage() {
                   rows={6}
                   required
                 />
-                <Button type="submit" className="w-full bg-primary text-white hover:bg-primary/90" disabled={isSubmitting}>
+                <Button
+                  type="submit"
+                  className="w-full bg-primary text-white hover:bg-primary/90 text-lg font-bold py-4 mt-6 shadow-lg z-10"
+                  style={{ position: 'relative' }}
+                  disabled={isSubmitting}
+                >
                   {isSubmitting ? "Submitting..." : "Submit"}
                 </Button>
               </form>
