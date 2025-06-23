@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
   return (
     <header className="bg-gray-900/98 backdrop-blur-lg shadow-xl border-b border-purple-500/20 sticky top-0 z-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-24 items-center justify-between">
+        <div className="flex h-28 items-center justify-between">
           {/* Combined Logo Design */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-6 group">
@@ -56,13 +56,18 @@ export const Header: React.FC = () => {
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 rounded-2xl blur opacity-20 group-hover:opacity-40 pulse-bg transition-opacity duration-500"></div>
               </div>
               
-              <div className="hidden sm:block">
-                <span className="text-2xl font-black text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-500">
-                  Water of Life
-                </span>
-                <span className="block text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-500 tracking-wider">
-                  Sanctuary
-                </span>
+              <div className="hidden sm:block ml-4">
+                <div className="flex flex-col justify-center">
+                  <span className="text-xl font-black text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-500 leading-tight">
+                    Water of Life
+                  </span>
+                  <span className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-500 tracking-wider leading-tight">
+                    Sanctuary
+                  </span>
+                  <span className="text-xs text-gray-400 group-hover:text-gray-200 transition-colors duration-500 tracking-wide">
+                    RCCG Church
+                  </span>
+                </div>
               </div>
             </Link>
           </div>
