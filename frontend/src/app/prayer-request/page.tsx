@@ -67,10 +67,10 @@ export default function PrayerRequestPage() {
                     name="type"
                     value={form.type}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900 dark:bg-gray-900 dark:text-white"
                   >
                     {REQUEST_TYPES.map((option) => (
-                      <option key={option.value} value={option.value}>{option.label}</option>
+                      <option key={option.value} value={option.value} className="text-gray-900 dark:text-white bg-white dark:bg-gray-900">{option.label}</option>
                     ))}
                   </select>
                 </div>
@@ -106,7 +106,7 @@ export default function PrayerRequestPage() {
                   rows={6}
                   required
                 />
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                <Button type="submit" className="w-full bg-primary text-white hover:bg-primary/90" disabled={isSubmitting}>
                   {isSubmitting ? "Submitting..." : "Submit"}
                 </Button>
               </form>
