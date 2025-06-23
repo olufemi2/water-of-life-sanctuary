@@ -6,18 +6,34 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/Button";
 
-export default function PrayerRequestPage() {
-  const [form, setForm] = useState({ name: "", email: "", title: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+const REQUEST_TYPES = [
+  { value: "prayer", label: "Prayer Request" },
+  { value: "testimony", label: "Testimony" },
+];
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+export default function PrayerRequestPage() {
+  const [form, setForm] = useState({
+    type: "prayer",
+    name: "",
+    email: "",
+    title: "",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    // TODO: Integrate backend/email service
+    setIsSubmitting(true);
+    // TODO: Integrate backend/email service to send to info@wateroflifesanctuary.org.uk
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitted(true);
+    }, 1200);
   };
 
   return (
@@ -42,6 +58,22 @@ export default function PrayerRequestPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="type" className="block text-sm font-medium text-gray-700 mb-1">
+                    Type
+                  </label>
+                  <select
+                    id="type"
+                    name="type"
+                    value={form.type}
+                    onChange={handleChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  >
+                    {REQUEST_TYPES.map((option) => (
+                      <option key={option.value} value={option.value}>{option.label}</option>
+                    ))}
+                  </select>
+                </div>
                 <Input
                   type="text"
                   name="name"
@@ -68,13 +100,15 @@ export default function PrayerRequestPage() {
                 />
                 <Textarea
                   name="message"
-                  placeholder="Message Details"
+                  placeholder={form.type === "prayer" ? "Type your prayer request here..." : "Type your testimony here..."}
                   value={form.message}
                   onChange={handleChange}
                   rows={6}
                   required
                 />
-                <Button type="submit" className="w-full">Submit</Button>
+                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? "Submitting..." : "Submit"}
+                </Button>
               </form>
             )}
           </CardContent>
