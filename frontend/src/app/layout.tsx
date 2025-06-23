@@ -4,7 +4,6 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ThemeProvider } from "@/contexts/ThemeContext";
-import Link from 'next/link';
 
 const inter = Inter({
   subsets: ["latin"],
