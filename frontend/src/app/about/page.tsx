@@ -37,24 +37,6 @@ const leadership = [
     role: 'Assistant Pastor',
     bio: 'Pastor Kunle Solaru has been with the assembly since 2008 and serves faithfully as the Assistant Pastor.',
     email: 'info@wateroflifesanctuary.org.uk'
-  },
-  {
-    name: 'Pastor Sarah Williams',
-    role: 'Associate Pastor',
-    bio: 'Pastor Sarah oversees our children\'s and family ministries. She has a heart for helping families grow together in faith and has been with our church for 8 years.',
-    email: 'info@wateroflifesanctuary.org.uk'
-  },
-  {
-    name: 'David Martinez',
-    role: 'Worship Director',
-    bio: 'David leads our worship team and has a passion for creating meaningful worship experiences. He has been serving in worship ministry for over 12 years.',
-    email: 'info@wateroflifesanctuary.org.uk'
-  },
-  {
-    name: 'Jennifer Chen',
-    role: 'Youth Pastor',
-    bio: 'Jennifer has been working with teenagers for 6 years and loves helping young people discover their purpose in Christ. She oversees all youth ministry programs.',
-    email: 'info@wateroflifesanctuary.org.uk'
   }
 ]
 
