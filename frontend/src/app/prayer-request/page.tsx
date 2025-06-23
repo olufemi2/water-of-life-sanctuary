@@ -108,7 +108,7 @@ export default function PrayerRequestPage() {
                 />
                 <Button
                   type="submit"
-                  className="mx-auto block bg-primary text-white hover:bg-primary/90 text-base font-bold py-3 px-8 mt-6 shadow-lg z-10 rounded-md"
+                  className="mx-auto block bg-blue-600 text-white hover:bg-blue-700 text-base font-bold py-3 px-8 mt-6 shadow-lg z-10 rounded-md border border-blue-800"
                   style={{ position: 'relative', minWidth: '160px' }}
                   disabled={isSubmitting}
                 >
