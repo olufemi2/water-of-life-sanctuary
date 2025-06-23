@@ -42,105 +42,78 @@ export const HeroSection: React.FC = () => {
   const styles = getHeroStyles()
 
   return (
-    <section className={styles.container}>
-      <div className={styles.overlay}></div>
-      
-      {/* Wood Cross positioned at top center */}
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
-        <WoodCross size="lg" className="opacity-80" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-600 via-pink-500 to-orange-500 animate-gradient">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white/5 rounded-full blur-2xl float"></div>
       </div>
       
-      <div className="relative mx-auto max-w-7xl px-4 py-32 sm:px-6 lg:px-8">
+      {/* Modern floating cross */}
+      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10 float">
+        <div className="w-16 h-16 bg-white/20 backdrop-blur-lg rounded-2xl flex items-center justify-center shadow-xl">
+          <WoodCross size="md" className="opacity-80" />
+        </div>
+      </div>
+      
+      <div className="relative mx-auto max-w-7xl px-4 py-32 sm:px-6 lg:px-8 z-10">
         <div className="text-center">
-          <h1 className={styles.title}>
-            {variant === 'brutalist' ? (
-              <>
-                FAITH GROWS HERE
-                <span className={styles.subtitle}>WATER OF LIFE SANCTUARY</span>
-              </>
-            ) : (
-              <>
-                Welcome Home to
-                <span className={styles.subtitle}>Water of Life Sanctuary</span>
-              </>
-            )}
+          <div className="mb-6">
+            <span className="inline-block px-6 py-2 bg-white/20 backdrop-blur-lg rounded-full text-white font-medium text-sm tracking-wider uppercase">
+              Welcome to Our Community
+            </span>
+          </div>
+          
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+            Water of Life
+            <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+              Sanctuary
+            </span>
           </h1>
           
-          <p className={`mx-auto mt-6 max-w-2xl text-xl leading-8 ${
-            variant === 'brutalist' 
-              ? 'text-muted-foreground font-bold uppercase tracking-wide' 
-              : 'text-blue-100'
-          }`}>
-            {variant === 'brutalist' 
-              ? 'COMMUNITY • WORSHIP • SERVICE • LOVE' 
-              : 'A place where faith grows, community thrives, and everyone belongs. Join us as we worship together and serve our community with love.'
-            }
+          <p className="mx-auto mt-6 max-w-3xl text-xl text-white/90 leading-relaxed">
+            A place where faith grows, community thrives, and everyone belongs. 
+            <span className="font-semibold text-yellow-300"> Join us as we worship together and serve our community with love.</span>
           </p>
 
-          <div className={`mt-10 grid gap-4 sm:grid-cols-3 ${
-            variant === 'brutalist' ? 'transform rotate-1' : ''
-          }`}>
+          <div className="mt-12 grid gap-6 sm:grid-cols-3 max-w-4xl mx-auto">
             {serviceTimes.map((service, index) => (
-              <div key={index} className={
-                variant === 'brutalist' 
-                  ? `bg-primary text-primary-foreground p-6 border-4 border-accent transform ${index % 2 === 0 ? '-rotate-2' : 'rotate-2'} hover:rotate-0 transition-transform` 
-                  : 'rounded-lg bg-white/10 backdrop-blur-sm p-4'
-              }>
-                <div className="flex items-center justify-center space-x-2">
-                  <ClockIcon className={`h-5 w-5 ${
-                    variant === 'brutalist' ? 'text-accent' : 'text-amber-400'
-                  }`} />
-                  <span className={`font-semibold ${
-                    variant === 'brutalist' ? 'uppercase tracking-wider' : ''
-                  }`}>{service.day}</span>
+              <div key={index} className="modern-card p-6 text-center group hover:scale-105 transition-all duration-300">
+                <div className="flex items-center justify-center space-x-2 mb-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                    <ClockIcon className="h-5 w-5 text-white" />
+                  </div>
+                  <span className="font-bold text-gray-800 text-lg">{service.day}</span>
                 </div>
-                <div className={`mt-1 text-xl font-bold ${
-                  variant === 'brutalist' ? 'text-2xl font-black' : ''
-                }`}>{service.time}</div>
-                <div className={`text-sm ${
-                  variant === 'brutalist' ? 'text-muted uppercase font-bold' : 'text-blue-100'
-                }`}>{service.type}</div>
+                <div className="text-2xl font-black text-gray-900 mb-2">{service.time}</div>
+                <div className="text-sm font-medium text-purple-600 uppercase tracking-wider">{service.type}</div>
               </div>
             ))}
           </div>
 
-          <div className={`mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center ${
-            variant === 'brutalist' ? 'transform -rotate-1' : ''
-          }`}>
-            <Button 
-              size="lg" 
-              className={
-                variant === 'brutalist'
-                  ? 'bg-accent text-accent-foreground hover:bg-accent/80 focus-visible:ring-accent group border-4 border-primary font-black uppercase tracking-wider transform hover:scale-105 transition-all'
-                  : 'bg-amber-500 text-white hover:bg-amber-600 focus-visible:ring-amber-500 group'
-              }
+          <div className="mt-12 flex flex-col gap-6 sm:flex-row sm:justify-center">
+            <button 
+              className="btn-modern group"
               onClick={() => window.location.href = '/plan-visit'}
             >
-              {variant === 'brutalist' ? 'JOIN US NOW!' : 'Plan Your Visit'}
-              <ChevronRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+              Plan Your Visit
+              <ChevronRightIcon className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </button>
             
-            <Button 
-              size="lg" 
-              variant="outline"
-              className={
-                variant === 'brutalist'
-                  ? 'bg-secondary text-secondary-foreground border-4 border-primary hover:bg-secondary/80 font-black uppercase tracking-wider transform hover:scale-105 transition-all'
-                  : 'bg-white/10 border-white/20 text-white hover:bg-white/20'
-              }
+            <button 
+              className="bg-white/20 backdrop-blur-lg border border-white/30 text-white hover:bg-white/30 font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               onClick={() => window.location.href = '/sermons'}
             >
-              {variant === 'brutalist' ? 'WATCH NOW!' : 'Watch Latest Sermon'}
-            </Button>
+              Watch Latest Sermon
+            </button>
           </div>
 
-          <div className={`mt-8 flex items-center justify-center space-x-2 ${
-            variant === 'brutalist' 
-              ? 'text-muted-foreground font-bold uppercase tracking-wider' 
-              : 'text-blue-100'
-          }`}>
-            <MapPinIcon className="h-5 w-5" />
-            <span>The Kings Centre Simpson, Milton Keynes MK6 3AL</span>
+          <div className="mt-10 flex items-center justify-center space-x-2 text-white/80">
+            <div className="w-8 h-8 bg-white/20 backdrop-blur-lg rounded-full flex items-center justify-center">
+              <MapPinIcon className="h-4 w-4" />
+            </div>
+            <span className="font-medium">The Kings Centre Simpson, Milton Keynes MK6 3AL</span>
           </div>
         </div>
       </div>

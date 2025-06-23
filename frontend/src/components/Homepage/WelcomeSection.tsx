@@ -22,49 +22,59 @@ const values = [
 
 export const WelcomeSection: React.FC = () => {
   return (
-    <section className="bg-gray-50 py-16">
+    <section className="bg-gradient-to-br from-gray-50 to-purple-50 py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            Welcome to Our Church Family
+          <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-sm font-semibold mb-6">
+            Our Community Values
+          </div>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+            Welcome to Our
+            <span className="block text-transparent bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text">
+              Church Family
+            </span>
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-6 text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Discover what makes Water of Life Sanctuary a special place to grow in faith and fellowship.
           </p>
         </div>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {values.map((value, index) => (
-            <Card key={index} className="text-center">
-              <CardContent className="pt-6">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
-                  <value.icon className="h-8 w-8 text-purple-600" />
-                </div>
-                <h3 className="mt-4 text-xl font-semibold text-gray-900">{value.title}</h3>
-                <p className="mt-2 text-gray-600">{value.description}</p>
-              </CardContent>
-            </Card>
+            <div key={index} className="modern-card text-center group p-8 hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-purple-50">
+              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg group-hover:shadow-xl transition-all duration-300 float">
+                <value.icon className="h-10 w-10 text-white" />
+              </div>
+              <h3 className="mt-6 text-2xl font-black text-gray-900">{value.title}</h3>
+              <p className="mt-4 text-gray-700 leading-relaxed">{value.description}</p>
+            </div>
           ))}
         </div>
 
-        <div className="mt-16 rounded-lg bg-white p-8 shadow-sm">
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900">New to Our Church?</h3>
-              <p className="mt-4 text-gray-600">
+        <div className="mt-16 modern-card p-10 bg-gradient-to-br from-purple-50 to-orange-50">
+          <div className="grid gap-8 lg:grid-cols-2 items-center">
+            <div className="space-y-6">
+              <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-sm font-semibold">
+                New Visitors Welcome
+              </div>
+              <h3 className="text-3xl font-black text-gray-900 leading-tight">
+                First Time Here?
+                <span className="block text-transparent bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text">
+                  We&apos;ve Got You Covered!
+                </span>
+              </h3>
+              <p className="text-lg text-gray-700 leading-relaxed">
                 We know visiting a new church can feel overwhelming. That&apos;s why we&apos;ve created resources 
                 to help you feel at home from the moment you arrive. Our friendly welcome team is here 
                 to answer questions and help you get connected.
               </p>
-              <div className="mt-6">
-                <a
-                  href="/plan-visit"
-                  className="inline-flex items-center text-purple-600 hover:text-purple-700"
-                >
-                  Learn more about your first visit
-                  <ChevronRightIcon className="ml-1 h-4 w-4" />
-                </a>
-              </div>
+              <button 
+                className="btn-modern group"
+                onClick={() => window.location.href = '/plan-visit'}
+              >
+                Plan Your First Visit
+                <ChevronRightIcon className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </button>
             </div>
             <div className="lg:pl-8">
               <h3 className="text-2xl font-bold text-gray-900">What to Expect</h3>

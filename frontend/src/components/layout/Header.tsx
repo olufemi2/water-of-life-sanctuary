@@ -21,13 +21,15 @@ export const Header: React.FC = () => {
   const [donationModalOpen, setDonationModalOpen] = useState(false)
 
   return (
-    <header className="bg-background shadow-sm border-b">{/* Dynamic background */}
+    <header className="bg-white/95 backdrop-blur-lg shadow-lg border-b border-white/20 sticky top-0 z-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
+        <div className="flex h-20 items-center justify-between">
+          {/* Modern Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-full bg-purple-600"></div>
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 float">
+                <span className="text-white font-black text-lg">W</span>
+              </div>
               <span className="text-xl font-bold text-foreground">Water of Life</span>
             </Link>
           </div>
