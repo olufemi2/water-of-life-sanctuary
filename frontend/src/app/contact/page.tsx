@@ -39,8 +39,8 @@ const contactInfo = [
   {
     icon: EnvelopeIcon,
     title: 'Email',
-    details: ['info@wateroflifesanctuary.org'],
-    link: 'mailto:info@wateroflifesanctuary.org'
+    details: ['info@wateroflifesanctuary.org.uk'],
+    link: 'mailto:info@wateroflifesanctuary.org.uk'
   },
   {
     icon: ClockIcon,
@@ -54,21 +54,21 @@ const officeStaff = [
   {
     name: 'Pastor Michael Johnson',
     role: 'Senior Pastor',
-    email: 'pastor@wateroflifesanctuary.org',
+    email: 'info@wateroflifesanctuary.org.uk',
     phone: '(555) 123-4567 ext. 101',
     availability: 'Monday - Thursday, By appointment'
   },
   {
     name: 'Mary Rodriguez',
     role: 'Church Administrator',
-    email: 'admin@wateroflifesanctuary.org',
+    email: 'info@wateroflifesanctuary.org.uk',
     phone: '(555) 123-4567 ext. 102',
     availability: 'Monday - Friday, 9:00 AM - 5:00 PM'
   },
   {
     name: 'Pastor Sarah Williams',
     role: 'Family & Children\'s Pastor',
-    email: 'children@wateroflifesanctuary.org',
+    email: 'info@wateroflifesanctuary.org.uk',
     phone: '(555) 123-4567 ext. 103',
     availability: 'Tuesday - Friday, 10:00 AM - 4:00 PM'
   }

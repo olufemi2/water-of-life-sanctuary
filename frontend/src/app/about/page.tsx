@@ -27,28 +27,28 @@ const values = [
 
 const leadership = [
   {
-    name: 'Pastor Michael Johnson',
+    name: 'Pst. Yomi Ogunlesi',
     role: 'Senior Pastor',
-    bio: 'Pastor Michael has been leading Water of Life Sanctuary for over 15 years. He holds a Master of Divinity from Seminary College and is passionate about expository preaching and pastoral care.',
-    email: 'mjohnson@wateroflifesanctuary.org'
+    bio: 'Pst. Yomi Ogunlesi has been leading Water of Life Sanctuary for over 15 years. He holds a Master of Divinity from Seminary College and is passionate about expository preaching and pastoral care.',
+    email: 'info@wateroflifesanctuary.org.uk'
   },
   {
     name: 'Pastor Sarah Williams',
     role: 'Associate Pastor',
     bio: 'Pastor Sarah oversees our children\'s and family ministries. She has a heart for helping families grow together in faith and has been with our church for 8 years.',
-    email: 'swilliams@wateroflifesanctuary.org'
+    email: 'info@wateroflifesanctuary.org.uk'
   },
   {
     name: 'David Martinez',
     role: 'Worship Director',
     bio: 'David leads our worship team and has a passion for creating meaningful worship experiences. He has been serving in worship ministry for over 12 years.',
-    email: 'dmartinez@wateroflifesanctuary.org'
+    email: 'info@wateroflifesanctuary.org.uk'
   },
   {
     name: 'Jennifer Chen',
     role: 'Youth Pastor',
     bio: 'Jennifer has been working with teenagers for 6 years and loves helping young people discover their purpose in Christ. She oversees all youth ministry programs.',
-    email: 'jchen@wateroflifesanctuary.org'
+    email: 'info@wateroflifesanctuary.org.uk'
   }
 ]
 
