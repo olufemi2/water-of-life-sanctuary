@@ -8,8 +8,7 @@ import {
   ClockIcon, 
   MapPinIcon, 
   UserGroupIcon,
-  EnvelopeIcon,
-  PhoneIcon
+  EnvelopeIcon
 } from '@heroicons/react/24/outline'
 import eventsData from '@/lib/data/events.json'
 
@@ -28,7 +27,6 @@ interface Event {
   registrationRequired: boolean
   registrationUrl?: string
   contactEmail: string
-  contactPhone?: string
   ageRange?: string
   cost?: string
 }
@@ -285,14 +283,6 @@ export default function EventsPage() {
                       {event.contactEmail}
                     </a>
                   </div>
-                  {event.contactPhone && (
-                    <div className="flex items-center text-sm text-gray-600">
-                      <PhoneIcon className="h-4 w-4 mr-2" />
-                      <a href={`tel:${event.contactPhone}`} className="hover:text-blue-600">
-                        {event.contactPhone}
-                      </a>
-                    </div>
-                  )}
                 </div>
 
                 {/* Actions */}

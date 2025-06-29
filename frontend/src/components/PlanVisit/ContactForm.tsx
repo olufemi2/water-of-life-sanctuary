@@ -7,7 +7,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 interface FormData {
   name: string
   email: string
-  phone: string
   visitDate: string
   familySize: string
   questions: string
@@ -19,7 +18,6 @@ export const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
-    phone: '',
     visitDate: '',
     familySize: '',
     questions: '',
@@ -62,7 +60,7 @@ export const ContactForm: React.FC = () => {
               Someone from our welcome team will reach out to you soon.
             </p>
             <p className="text-sm text-gray-500">
-              If you have any immediate questions, feel free to call us at (555) 123-4567.
+              If you have any immediate questions, feel free to email us at info@wateroflifesanctuary.org.uk.
             </p>
           </CardContent>
         </Card>
@@ -120,21 +118,7 @@ export const ContactForm: React.FC = () => {
               </div>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="(555) 123-4567"
-                />
-              </div>
+            <div className="grid gap-4 sm:grid-cols-1">
               <div>
                 <label htmlFor="visitDate" className="block text-sm font-medium text-gray-700 mb-1">
                   Planning to Visit
@@ -212,7 +196,6 @@ export const ContactForm: React.FC = () => {
               <div className="space-y-2">
                 {[
                   { value: 'email', label: 'Email' },
-                  { value: 'phone', label: 'Phone call' },
                   { value: 'none', label: 'Please don\'t contact me - I\'ll reach out if needed' }
                 ].map((option) => (
                   <label key={option.value} className="flex items-center">

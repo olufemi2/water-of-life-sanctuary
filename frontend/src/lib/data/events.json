@@ -11,8 +11,7 @@
     "imageUrl": "/events/summer-bbq.jpg",
     "registrationRequired": true,
     "registrationUrl": "/events/summer-bbq-2024/register",
-    "contactEmail": "events@wateroflifesanctuary.org",
-    "contactPhone": "(555) 123-4567"
+    "contactEmail": "events@wateroflifesanctuary.org.uk"
   },
   {
     "id": "vacation-bible-school-2024",
@@ -27,8 +26,7 @@
     "imageUrl": "/events/vbs-2024.jpg",
     "registrationRequired": true,
     "registrationUrl": "/events/vbs-2024/register",
-    "contactEmail": "children@wateroflifesanctuary.org",
-    "contactPhone": "(555) 123-4567",
+    "contactEmail": "children@wateroflifesanctuary.org.uk",
     "ageRange": "4-12 years"
   },
   {
@@ -42,7 +40,7 @@
     "featured": false,
     "imageUrl": "/events/mens-breakfast.jpg",
     "registrationRequired": false,
-    "contactEmail": "men@wateroflifesanctuary.org"
+    "contactEmail": "men@wateroflifesanctuary.org.uk"
   },
   {
     "id": "womens-tea-party",
@@ -56,7 +54,7 @@
     "imageUrl": "/events/womens-tea.jpg",
     "registrationRequired": true,
     "registrationUrl": "/events/womens-tea/register",
-    "contactEmail": "women@wateroflifesanctuary.org"
+    "contactEmail": "women@wateroflifesanctuary.org.uk"
   },
   {
     "id": "youth-lock-in",
@@ -71,7 +69,7 @@
     "imageUrl": "/events/youth-lock-in.jpg",
     "registrationRequired": true,
     "registrationUrl": "/events/youth-lock-in/register",
-    "contactEmail": "youth@wateroflifesanctuary.org",
+    "contactEmail": "youth@wateroflifesanctuary.org.uk",
     "ageRange": "13-18 years"
   },
   {
@@ -86,7 +84,7 @@
     "imageUrl": "/events/service-day.jpg",
     "registrationRequired": true,
     "registrationUrl": "/events/service-day/register",
-    "contactEmail": "outreach@wateroflifesanctuary.org"
+    "contactEmail": "outreach@wateroflifesanctuary.org.uk"
   },
   {
     "id": "baptism-sunday",
@@ -94,12 +92,12 @@
     "date": "2024-08-11",
     "time": "During 11:00 AM Service",
     "location": "Main Sanctuary",
-    "description": "A special service celebrating baptisms. If you're interested in being baptized, please contact Pastor Johnson to schedule a meeting and learn more about this important step of faith.",
+    "description": "A special service celebrating baptisms. If you're interested in being baptized, please contact Pastor Yomi Ogunlesi to schedule a meeting and learn more about this important step of faith.",
     "category": "Worship",
     "featured": false,
     "imageUrl": "/events/baptism.jpg",
     "registrationRequired": false,
-    "contactEmail": "pastor@wateroflifesanctuary.org"
+    "contactEmail": "pastor@wateroflifesanctuary.org.uk"
   },
   {
     "id": "marriage-enrichment-retreat",
@@ -114,7 +112,7 @@
     "imageUrl": "/events/marriage-retreat.jpg",
     "registrationRequired": true,
     "registrationUrl": "/events/marriage-retreat/register",
-    "contactEmail": "marriages@wateroflifesanctuary.org",
+    "contactEmail": "marriages@wateroflifesanctuary.org.uk",
     "cost": "$200 per couple"
   }
 ]

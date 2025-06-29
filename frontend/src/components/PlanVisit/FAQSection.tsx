@@ -19,19 +19,19 @@ const faqs = [
   },
   {
     question: 'Do I need to bring anything?',
-    answer: 'Just bring yourself! We provide Bibles, connection cards, and anything else you might need. If you prefer to use your own Bible or take notes, feel free to bring those along.'
+    answer: 'Just bring yourself! We provide Bibles and anything else you might need. If you prefer to use your own Bible or take notes, feel free to bring those along.'
   },
   {
     question: 'Will anyone pressure me to join or give money?',
     answer: 'Absolutely not. We believe church should be a place where you can explore faith at your own pace. There\'s no pressure to join, give, or participate in anything you\'re not ready for.'
   },
   {
-    question: 'How long is the service?',
-    answer: 'Our services typically last 60-75 minutes, including worship music, a message, and prayer time. We try to be respectful of your time while creating meaningful worship experiences.'
+    question: 'What denomination is this church?',
+    answer: 'Water of Life Sanctuary is part of the Redeemed Christian Church of God (RCCG), a global pentecostal church with presence in 197 countries. We believe in the Holy Trinity, salvation by grace through faith, and the power of the Holy Spirit.'
   },
   {
-    question: 'Is childcare available?',
-    answer: 'Yes! We offer nursery care for children birth through age 2, and children\'s church for ages 3-12. All our childcare volunteers are background checked and trained. Check-in begins 15 minutes before service.'
+    question: 'What are the core beliefs of RCCG?',
+    answer: 'As an RCCG church, we believe in the Bible as the inspired Word of God, the Holy Trinity, salvation through Jesus Christ, water baptism by immersion, baptism of the Holy Spirit, divine healing, and sanctification. Our mission is to make heaven and take as many people with us as possible.'
   },
   {
     question: 'Can I talk to someone after the service?',

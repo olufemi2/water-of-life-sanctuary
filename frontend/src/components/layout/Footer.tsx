@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { MapPinIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
+import { MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 
 const quickLinks = [
   { name: 'Plan Your Visit', href: '/plan-visit' },
@@ -9,18 +9,12 @@ const quickLinks = [
   { name: 'About Us', href: '/about' },
 ]
 
-const ministries = [
-  { name: 'Youth Ministry', href: '/ministries/youth' },
-  { name: 'Children\'s Ministry', href: '/ministries/children' },
-  { name: 'Men\'s Ministry', href: '/ministries/men' },
-  { name: 'Women\'s Ministry', href: '/ministries/women' },
-]
 
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Church Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -38,12 +32,8 @@ export const Footer: React.FC = () => {
                 <span className="text-sm text-gray-300">The Kings Centre Simpson, Milton Keynes MK6 3AL</span>
               </div>
               <div className="flex items-center space-x-2">
-                <PhoneIcon className="h-4 w-4 text-gray-400" />
-                <span className="text-sm text-gray-300">(555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-2">
                 <EnvelopeIcon className="h-4 w-4 text-gray-400" />
-                <span className="text-sm text-gray-300">info@wateroflifesanctuary.org</span>
+                <span className="text-sm text-gray-300">info@wateroflifesanctuary.org.uk</span>
               </div>
             </div>
           </div>
@@ -65,35 +55,15 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Ministries */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Ministries</h3>
-            <ul className="space-y-2">
-              {ministries.map((ministry) => (
-                <li key={ministry.name}>
-                  <Link
-                    href={ministry.href}
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    {ministry.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         {/* Service Times */}
         <div className="mt-8 border-t border-gray-800 pt-8">
           <h3 className="text-lg font-semibold mb-4">Service Times</h3>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <h4 className="font-medium">Sunday Service</h4>
               <p className="text-gray-300">10:40 AM</p>
-            </div>
-            <div>
-              <h4 className="font-medium">Children's Church</h4>
-              <p className="text-gray-300">10:40 AM (Sundays)</p>
             </div>
             <div>
               <h4 className="font-medium">Youth Club</h4>

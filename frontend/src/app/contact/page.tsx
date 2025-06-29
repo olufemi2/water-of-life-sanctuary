@@ -8,7 +8,6 @@ import { Textarea } from '@/components/ui/textarea'
 import { StaticGoogleMap } from '@/components/Maps/GoogleMap'
 import { 
   MapPinIcon, 
-  PhoneIcon, 
   EnvelopeIcon, 
   ClockIcon,
   CheckCircleIcon
@@ -17,7 +16,6 @@ import {
 interface ContactForm {
   name: string
   email: string
-  phone: string
   subject: string
   message: string
   type: 'general' | 'prayer' | 'visit' | 'ministry'
@@ -28,19 +26,13 @@ const contactInfo = [
     icon: MapPinIcon,
     title: 'Address',
     details: ['The Kings Centre Simpson', 'Milton Keynes MK6 3AL'],
-    link: 'https://maps.google.com/?q=The+Kings+Centre+Simpson+Milton+Keynes+MK6+3AL'
-  },
-  {
-    icon: PhoneIcon,
-    title: 'Phone',
-    details: ['(555) 123-4567'],
-    link: 'tel:+15551234567'
+    link: 'https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d1054.565615965636!2d-0.7156861788203863!3d52.01237574202516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d52.170403199999996!2d-0.5079172!4m5!1s0x487654d4040280ab%3A0x95df1c2d799740cc!2sThe%20Kings%20Centre%2C%20390%20Simpson%20Rd%2C%20Simpson%2C%20Milton%20Keynes%20MK6%203AL!3m2!1d52.0144397!2d-0.7160768!5e0!3m2!1sen!2suk!4v1751155335703!5m2!1sen!2suk'
   },
   {
     icon: EnvelopeIcon,
     title: 'Email',
-    details: ['info@wateroflifesanctuary.org'],
-    link: 'mailto:info@wateroflifesanctuary.org'
+    details: ['info@wateroflifesanctuary.org.uk'],
+    link: 'mailto:info@wateroflifesanctuary.org.uk'
   },
   {
     icon: ClockIcon,
@@ -52,25 +44,16 @@ const contactInfo = [
 
 const officeStaff = [
   {
-    name: 'Pastor Michael Johnson',
+    name: 'Pastor Yomi Ogunlesi',
     role: 'Senior Pastor',
-    email: 'pastor@wateroflifesanctuary.org',
-    phone: '(555) 123-4567 ext. 101',
-    availability: 'Monday - Thursday, By appointment'
+    email: 'pastor@wateroflifesanctuary.org.uk',
+    availability: 'By appointment'
   },
   {
-    name: 'Mary Rodriguez',
-    role: 'Church Administrator',
-    email: 'admin@wateroflifesanctuary.org',
-    phone: '(555) 123-4567 ext. 102',
-    availability: 'Monday - Friday, 9:00 AM - 5:00 PM'
-  },
-  {
-    name: 'Pastor Sarah Williams',
-    role: 'Family & Children\'s Pastor',
-    email: 'children@wateroflifesanctuary.org',
-    phone: '(555) 123-4567 ext. 103',
-    availability: 'Tuesday - Friday, 10:00 AM - 4:00 PM'
+    name: 'Pastor Kunle Solaru',
+    role: 'Associate Pastor',
+    email: 'admin@wateroflifesanctuary.org.uk',
+    availability: 'By appointment'
   }
 ]
 
@@ -78,7 +61,6 @@ export default function ContactPage() {
   const [formData, setFormData] = useState<ContactForm>({
     name: '',
     email: '',
-    phone: '',
     subject: '',
     message: '',
     type: 'general'
@@ -189,11 +171,6 @@ export default function ContactPage() {
                           {staff.email}
                         </a>
                       </div>
-                      <div>
-                        <a href={`tel:${staff.phone.replace(/\D/g, '')}`} className="hover:text-blue-600">
-                          {staff.phone}
-                        </a>
-                      </div>
                       <div className="text-xs text-gray-500">{staff.availability}</div>
                     </div>
                   </div>
@@ -201,26 +178,6 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            {/* Emergency Contact */}
-            <Card className="border-orange-200 bg-orange-50">
-              <CardHeader>
-                <CardTitle className="text-orange-800">Emergency Contact</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-orange-700 mb-2">
-                  For pastoral emergencies outside office hours:
-                </p>
-                <a 
-                  href="tel:+15551234567"
-                  className="text-orange-600 font-medium hover:text-orange-700"
-                >
-                  (555) 123-4567
-                </a>
-                <p className="text-xs text-orange-600 mt-2">
-                  Please call only for urgent pastoral care needs
-                </p>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Contact Form */}
@@ -265,20 +222,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                        Phone Number
-                      </label>
-                      <Input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="(555) 123-4567"
-                      />
-                    </div>
+                  <div className="grid gap-4 sm:grid-cols-1">
                     <div>
                       <label htmlFor="type" className="block text-sm font-medium text-gray-700 mb-1">
                         Message Type
