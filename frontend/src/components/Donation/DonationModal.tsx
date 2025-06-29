@@ -28,7 +28,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose })
           <div className="space-y-2">
             <h3 className="text-xl font-semibold text-gray-900">Coming Soon!</h3>
             <p className="text-gray-600">
-              We're currently developing a secure online giving platform to make it easier for you to support our ministry.
+              We&apos;re currently developing a secure online giving platform to make it easier for you to support our ministry.
             </p>
           </div>
 
