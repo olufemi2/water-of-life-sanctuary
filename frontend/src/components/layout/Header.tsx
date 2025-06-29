@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { DonationModal } from '@/components/Donation/DonationModal'
+import { FoodBankBanner } from '@/components/ui/FoodBankBanner'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
@@ -21,7 +22,9 @@ export const Header: React.FC = () => {
   const [donationModalOpen, setDonationModalOpen] = useState(false)
 
   return (
-    <header className="bg-gray-900/98 backdrop-blur-lg shadow-xl border-b border-purple-500/20 sticky top-0 z-50">
+    <>
+      <FoodBankBanner />
+      <header className="bg-gray-900/98 backdrop-blur-lg shadow-xl border-b border-purple-500/20 sticky top-0 z-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-28 items-center justify-between">
           {/* Combined Logo Design */}
@@ -223,5 +226,6 @@ export const Header: React.FC = () => {
         onClose={() => setDonationModalOpen(false)}
       />
     </header>
+    </>
   )
 }
