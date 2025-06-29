@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { Input } from './input'
 import { Textarea } from './textarea'
 import { ExclamationTriangleIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
@@ -44,7 +44,7 @@ export function FormField({
   const [touched, setTouched] = useState(false)
   const [isValid, setIsValid] = useState(false)
 
-  const validate = (val: string): string | null => {
+  const validate = useCallback((val: string): string | null => {
     if (!validation) return null
 
     if (validation.required && !val.trim()) {
@@ -74,7 +74,7 @@ export function FormField({
     }
 
     return null
-  }
+  }, [validation, label, type])
 
   useEffect(() => {
     if (touched) {
@@ -82,7 +82,7 @@ export function FormField({
       setError(validationError)
       setIsValid(!validationError && value.trim().length > 0)
     }
-  }, [value, touched])
+  }, [value, touched, validate])
 
   const handleBlur = () => {
     setTouched(true)

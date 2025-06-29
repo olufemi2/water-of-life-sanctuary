@@ -29,13 +29,13 @@ const leadership = [
   {
     name: 'Pastor Yomi Ogunlesi',
     role: 'Senior Pastor',
-    bio: 'Pastor Yomi Ogunlesi is the senior pastor of Water of Life Sanctuary RCCG. He has a heart for expository preaching and pastoral care, leading the congregation with wisdom and dedication.',
+    bio: 'Pastor Yomi Ogunlesi has been the Senior Pastor of Water of Life Sanctuary since 2003. He has a heart for expository preaching and pastoral care, leading the congregation with wisdom and dedication.',
     email: 'pastor@wateroflifesanctuary.org.uk'
   },
   {
     name: 'Pastor Kunle Solaru',
     role: 'Associate Pastor',
-    bio: 'Pastor Kunle Solaru serves as the associate pastor, overseeing various ministries and ensuring the smooth running of services and activities. He is dedicated to serving the church community.',
+    bio: 'Pastor Kunle Solaru has been with the assembly since 2008 and serves faithfully as the Associate Pastor, overseeing various ministries and ensuring the smooth running of services and activities.',
     email: 'admin@wateroflifesanctuary.org.uk'
   }
 ]
@@ -51,7 +51,7 @@ export default function AboutPage() {
               About Water of Life Sanctuary
             </h1>
             <p className="mt-6 mx-auto max-w-3xl text-xl text-gray-600">
-              A fellowship of believers, made in God's image and called as disciples of Christ to share the Good News 
+              A fellowship of believers, made in God&apos;s image and called as disciples of Christ to share the Good News 
               with everyone through learning, listening, praying and working together actively to reach out to our communities. 
               We are a place to believe, belong, and become!
             </p>

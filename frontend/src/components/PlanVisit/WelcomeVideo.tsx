@@ -10,10 +10,10 @@ export const WelcomeVideo: React.FC = () => {
   return (
     <section className="text-center">
       <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-        A Personal Welcome from Pastor Johnson
+        A Personal Welcome from Pastor Yomi Ogunlesi
       </h2>
       <p className="mt-4 text-lg text-gray-600">
-        Hear directly from our pastor about what makes our church special
+        Hear directly from our Lead Pastor about what makes our church special
       </p>
 
       <Card className="mt-8 overflow-hidden">
@@ -30,7 +30,7 @@ export const WelcomeVideo: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-blue-800/20 flex items-center justify-center">
                   <div className="text-white text-center">
                     <h3 className="text-2xl font-bold mb-2">Welcome Message</h3>
-                    <p className="text-lg">Click to play Pastor Johnson's welcome</p>
+                    <p className="text-lg">Click to play Pastor Yomi Ogunlesi&apos;s welcome</p>
                   </div>
                 </div>
               </div>

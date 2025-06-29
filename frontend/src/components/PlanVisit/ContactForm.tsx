@@ -56,7 +56,7 @@ export const ContactForm: React.FC = () => {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Thank You!</h3>
             <p className="text-gray-600 mb-6">
-              We've received your information and are excited about your upcoming visit! 
+              We&apos;ve received your information and are excited about your upcoming visit! 
               Someone from our welcome team will reach out to you soon.
             </p>
             <p className="text-sm text-gray-500">
@@ -72,7 +72,7 @@ export const ContactForm: React.FC = () => {
     <section>
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-          Let Us Know You're Coming
+          Let Us Know You&apos;re Coming
         </h2>
         <p className="mt-4 text-lg text-gray-600">
           Help us prepare for your visit and answer any questions you might have

@@ -70,15 +70,15 @@ export const FamilyInfo: React.FC = () => {
               Additional Ministries
             </h3>
             <div className="mb-6">
-              <h4 className="font-medium text-gray-900 mb-2">Women's Fellowship</h4>
+              <h4 className="font-medium text-gray-900 mb-2">Women&apos;s Fellowship</h4>
               <p className="text-gray-600 text-sm mb-4">
-                'The Glorious Fellowship of Water of Life Sanctuary' - providing every woman from all walks 
+                &apos;The Glorious Fellowship of Water of Life Sanctuary&apos; - providing every woman from all walks 
                 of life with opportunities to grow spiritually and support each other through the good news 
                 of the kingdom of God.
               </p>
             </div>
             <p className="text-gray-600 mb-6">
-              We'd love to give your children a special welcome gift and help you get connected 
+              We&apos;d love to give your children a special welcome gift and help you get connected 
               with the programs that are right for your family.
             </p>
             <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
@@ -92,7 +92,7 @@ export const FamilyInfo: React.FC = () => {
               </div>
               <div className="text-center">
                 <h4 className="font-medium text-gray-900">Parent Notification</h4>
-                <p className="text-sm text-gray-600">We'll text if your child needs you</p>
+                <p className="text-sm text-gray-600">We&apos;ll text if your child needs you</p>
               </div>
             </div>
           </div>

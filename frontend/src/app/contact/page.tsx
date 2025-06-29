@@ -95,7 +95,7 @@ export default function ContactPage() {
             </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Message Sent!</h2>
             <p className="text-gray-600 mb-6">
-              Thank you for reaching out to us. We've received your message and will get back to you within 24-48 hours.
+              Thank you for reaching out to us. We&apos;ve received your message and will get back to you within 24-48 hours.
             </p>
             <Button onClick={() => window.location.href = '/'}>
               Return to Home
@@ -113,7 +113,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-gray-900">Contact Us</h1>
           <p className="mt-2 text-lg text-gray-600">
-            We'd love to hear from you! Reach out with any questions or to schedule a visit.
+            We&apos;d love to hear from you! Reach out with any questions or to schedule a visit.
           </p>
         </div>
       </div>
@@ -186,7 +186,7 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle>Send Us a Message</CardTitle>
                 <p className="text-gray-600">
-                  Fill out the form below and we'll get back to you as soon as possible.
+                  Fill out the form below and we&apos;ll get back to you as soon as possible.
                 </p>
               </CardHeader>
               <CardContent>
@@ -295,7 +295,7 @@ export default function ContactPage() {
           <CardHeader>
             <CardTitle>Find Us</CardTitle>
             <p className="text-gray-600">
-              We're located at The Kings Centre Simpson in Milton Keynes, with accessible parking available.
+              We&apos;re located at The Kings Centre Simpson in Milton Keynes, with accessible parking available.
             </p>
           </CardHeader>
           <CardContent>

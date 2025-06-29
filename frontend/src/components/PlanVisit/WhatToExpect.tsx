@@ -53,7 +53,7 @@ export const WhatToExpect: React.FC = () => {
           What to Expect
         </h2>
         <p className="mt-4 text-lg text-gray-600">
-          Here's everything you need to know for your first visit
+          Here&apos;s everything you need to know for your first visit
         </p>
       </div>
 

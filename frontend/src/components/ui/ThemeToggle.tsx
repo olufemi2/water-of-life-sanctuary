@@ -62,7 +62,7 @@ export function ThemeSelector() {
       <span className="text-sm font-medium">Theme:</span>
       <select
         value={variant}
-        onChange={(e) => setVariant(e.target.value as any)}
+        onChange={(e) => setVariant(e.target.value as 'zinc' | 'brutalist')}
         className="px-2 py-1 text-sm border rounded-md bg-background"
       >
         <option value="zinc">Zinc</option>
